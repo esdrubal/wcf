@@ -85,7 +85,7 @@ namespace System.ServiceModel.Description
                     return this.MemberInfo.GetCustomAttributes(attributeType, inherit).ToArray();
                 case AttributeProviderType.ParameterInfo:
                     //GetCustomAttributes could return null instead of empty collection for a known System.Relection issue, workaround the issue by explicitly checking the null
-                    IEnumerable<Attribute> customAttributes = null;
+                    IEnumerable<object> customAttributes = null;
                     customAttributes = this.ParameterInfo.GetCustomAttributes(attributeType, inherit);
                     return customAttributes == null ? null: customAttributes.ToArray();
             }
