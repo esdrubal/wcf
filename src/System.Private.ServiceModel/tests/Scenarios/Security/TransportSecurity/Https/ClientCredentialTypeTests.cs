@@ -109,7 +109,7 @@ public static class Https_ClientCredentialTypeTests
     }
 
     [Fact]
-    [ActiveIssue(69)]
+    [ActiveIssue(270)]
     [OuterLoop]
     public static void DigestAuthentication_RoundTrips_Echo()
     {
@@ -137,7 +137,6 @@ public static class Https_ClientCredentialTypeTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(604, PlatformID.AnyUnix)]
     public static void NtlmAuthentication_RoundTrips_Echo()
     {
         StringBuilder errorBuilder = new StringBuilder();
@@ -159,7 +158,6 @@ public static class Https_ClientCredentialTypeTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(604, PlatformID.AnyUnix)]
     public static void WindowsAuthentication_RoundTrips_Echo()
     {
         StringBuilder errorBuilder = new StringBuilder();

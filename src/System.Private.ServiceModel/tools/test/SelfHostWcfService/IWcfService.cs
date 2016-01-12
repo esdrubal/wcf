@@ -29,6 +29,10 @@ namespace WcfService
         void TestFault(String faultMsg);
 
         [OperationContract]
+        [FaultContract(typeof(int), Action = "http://tempuri.org/IWcfService/TestFaultIntFault", Name = "IntFault", Namespace = "http://www.contoso.com/wcfnamespace")]
+        void TestFaultInt(int faultCode);
+
+        [OperationContract]
         void ThrowInvalidOperationException(string message);
 
         [OperationContract(Action = "http://tempuri.org/IWcfService/GetDataUsingDataContract")]
@@ -46,6 +50,12 @@ namespace WcfService
         [OperationContract(Action = "http://tempuri.org/IWcfService/MessageContractRequestReplyNotWrapped")]
         ReplyBankingDataNotWrapped MessageContractRequestReplyNotWrapped(RequestBankingData bt);
 
+        [OperationContract(Action = "http://tempuri.org/IWcfService/MessageContractRequestReplyWithMessageHeader")]
+        ReplyBankingDataWithMessageHeader MessageContractRequestReplyWithMessageHeader(RequestBankingData bt);
+
+        [OperationContract(Action = "http://tempuri.org/IWcfService/MessageContractRequestReplyWithMessageHeaderNotNecessaryUnderstood")]
+        ReplyBankingDataWithMessageHeaderNotNecessaryUnderstood MessageContractRequestReplyWithMessageHeaderNotNecessaryUnderstood(RequestBankingData bt);
+
         [OperationContract(Action = "http://tempuri.org/IWcfService/EchoHttpMessageProperty")]
         TestHttpRequestMessageProperty EchoHttpRequestMessageProperty();
 
@@ -54,6 +64,9 @@ namespace WcfService
 
         [OperationContract(Action = "http://tempuri.org/IWcfService/GetRequestCustomHeader", ReplyAction = "*")]
         string GetRequestCustomHeader(string customHeaderName, string customHeaderNamespace);
+
+        [OperationContract(Action = "http://tempuri.org/IWcfService/GetIncomingMessageHeaders", ReplyAction = "*")]
+        Dictionary<string, string> GetIncomingMessageHeaders();
 
         [OperationContract(Action = "http://tempuri.org/IWcfService/EchoXmlSerializerFormat"), XmlSerializerFormat]
         string EchoXmlSerializerFormat(string message);

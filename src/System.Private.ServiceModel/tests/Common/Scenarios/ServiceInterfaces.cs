@@ -32,6 +32,10 @@ public interface IWcfService
     void TestFault(string faultMsg);
 
     [OperationContract]
+    [FaultContract(typeof(int), Action = "http://tempuri.org/IWcfService/TestFaultIntFault", Name = "IntFault", Namespace = "http://www.contoso.com/wcfnamespace")]
+    void TestFaultInt(int faultCode);
+
+    [OperationContract]
     void ThrowInvalidOperationException(string message);
 
     [OperationContract]
@@ -45,6 +49,9 @@ public interface IWcfService
 
     [OperationContract(Action = "http://tempuri.org/IWcfService/GetRequestCustomHeader", ReplyAction = "*")]
     string GetRequestCustomHeader(string customHeaderName, string customHeaderNamespace);
+
+    [OperationContract(Action = "http://tempuri.org/IWcfService/GetIncomingMessageHeaders", ReplyAction = "*")]
+    Dictionary<string, string> GetIncomingMessageHeaders();
 
     [OperationContract]
     Stream GetStreamFromString(string data);
