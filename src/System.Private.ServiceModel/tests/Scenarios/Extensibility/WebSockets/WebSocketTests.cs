@@ -13,7 +13,7 @@ public static class WebSocketTests
 {
     [Fact]
     [OuterLoop]
-    [ActiveIssue(420, PlatformID.AnyUnix)]
+    [ActiveIssue(420, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_RequestReply_BinaryStreamed()
     {
         NetHttpBinding binding = null;
@@ -75,7 +75,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(420, PlatformID.AnyUnix)]
+    [ActiveIssue(420, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_Duplex_BinaryStreamed()
     {
         NetHttpBinding binding = null;
@@ -167,7 +167,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(420, PlatformID.AnyUnix)]
+    [ActiveIssue(420, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Https_Duplex_BinaryStreamed()
     {
         BinaryMessageEncodingBindingElement binaryMessageEncodingBindingElement = null;
@@ -264,7 +264,7 @@ public static class WebSocketTests
     [OuterLoop]
     [ActiveIssue(4429)] // In #CoreFX
     [ActiveIssue(470)]
-    [ActiveIssue(420, PlatformID.AnyUnix)]
+    [ActiveIssue(420, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Https_Duplex_TextStreamed()
     {
         TextMessageEncodingBindingElement textMessageEncodingBindingElement = null;
@@ -359,7 +359,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(420, PlatformID.AnyUnix)]
+    [ActiveIssue(420, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_Duplex_TextStreamed()
     {
         NetHttpBinding binding = null;
@@ -451,7 +451,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(420, PlatformID.AnyUnix)]
+    [ActiveIssue(420, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_RequestReply_TextStreamed()
     {
         NetHttpBinding binding = null;
@@ -513,7 +513,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(420, PlatformID.AnyUnix)]
+    [ActiveIssue(420, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_WSTransportUsageDefault_DuplexCallback_GuidRoundtrip()
     {
         DuplexChannelFactory<IWcfDuplexService> factory = null;
@@ -553,7 +553,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(420, PlatformID.AnyUnix)]
+    [ActiveIssue(420, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_WSTransportUsageAlways_DuplexCallback_GuidRoundtrip()
     {
         DuplexChannelFactory<IWcfDuplexService> factory = null;
@@ -593,7 +593,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(420, PlatformID.AnyUnix)]
+    [ActiveIssue(420, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_WSScheme_WSTransportUsageAlways_DuplexCallback_GuidRoundtrip()
     {
         DuplexChannelFactory<IWcfDuplexService> factory = null;
@@ -637,7 +637,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(625, PlatformID.AnyUnix)]
+    [ActiveIssue(625, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Https_RequestReply_BinaryBuffered()
     {
         BinaryMessageEncodingBindingElement binaryMessageEncodingBindingElement = null;
@@ -688,7 +688,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(625, PlatformID.AnyUnix)]
+    [ActiveIssue(625, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Https_RequestReply_TextBuffered_KeepAlive()
     {
         TextMessageEncodingBindingElement textMessageEncodingBindingElement = null;
@@ -741,7 +741,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(625, PlatformID.AnyUnix)]
+    [ActiveIssue(625, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Https_Duplex_BinaryBuffered()
     {
         BinaryMessageEncodingBindingElement binaryMessageEncodingBindingElement = null;
@@ -808,7 +808,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(625, PlatformID.AnyUnix)]
+    [ActiveIssue(625, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Https_Duplex_TextBuffered_KeepAlive()
     {
         TextMessageEncodingBindingElement textMessageEncodingBindingElement = null;
@@ -875,7 +875,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(625, PlatformID.AnyUnix)]
+    [ActiveIssue(625, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_RequestReply_TextBuffered()
     {
         NetHttpBinding binding = null;
@@ -924,7 +924,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(625, PlatformID.AnyUnix)]
+    [ActiveIssue(625, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_RequestReply_BinaryBuffered_KeepAlive()
     {
         NetHttpBinding binding = null;
@@ -974,7 +974,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(625, PlatformID.AnyUnix)]
+    [ActiveIssue(625, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_Duplex_TextBuffered_KeepAlive()
     {
         NetHttpBinding binding = null;
@@ -1038,7 +1038,7 @@ public static class WebSocketTests
 
     [Fact]
     [OuterLoop]
-    [ActiveIssue(625, PlatformID.AnyUnix)]
+    [ActiveIssue(625, Xunit.PlatformID.AnyUnix)]
     public static void WebSocket_Http_Duplex_BinaryBuffered()
     {
         NetHttpBinding binding = null;
