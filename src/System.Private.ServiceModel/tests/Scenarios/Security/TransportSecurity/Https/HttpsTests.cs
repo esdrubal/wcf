@@ -161,7 +161,7 @@ public static class HttpsTests
     }
 
     [Fact]
-    [ActiveIssue(544, PlatformID.AnyUnix)]
+    [ActiveIssue(544, Xunit.PlatformID.AnyUnix)]
     [OuterLoop]
     public static void ServerCertificateValidation_EchoString()
     {
